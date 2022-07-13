@@ -1,0 +1,216 @@
+\hypertarget{class_c_parser}{}\doxysection{CParser Class Reference}
+\label{class_c_parser}\index{CParser@{CParser}}
+
+
+The class responsible for entering and processing the entered information from the console and from the file.  
+
+
+
+
+{\ttfamily \#include $<$CParser.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_c_parser_a197e70b579961d7ddec9fc8d4111f14d}{parse\+Option}} (size\+\_\+t \&option)
+\begin{DoxyCompactList}\small\item\em A function that accepts a selection option from the console. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_c_parser_a4aa466e21620fd0eae7b48737177730c}{parse\+Dimensions}} (int \&rows, int \&columns)
+\begin{DoxyCompactList}\small\item\em A function that accepts matrix dimensions from the console. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_c_parser_a3777d961cfa4d6c3a035143477abcdd2}{parse\+Operation}} (string \&operation)
+\begin{DoxyCompactList}\small\item\em A function that accepts operation type from the console. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_c_parser_a93c0c5715761640b7d41a6948f135289}{toupper\+Operation}} (string operation)
+\begin{DoxyCompactList}\small\item\em An auxiliary function for checking the correctness of the type of operation. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_c_parser_a48e7d15a128598aa916697d7209a311e}{parse\+Constant}} (double \&constant)
+\begin{DoxyCompactList}\small\item\em A function that accepts a constant from the console for product operation. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_c_parser_a04989c68af47deac7742a52313b86add}{parse\+Indexes}} (int \&row\+\_\+idx, int \&column\+\_\+idx)
+\begin{DoxyCompactList}\small\item\em A function that accepts indexes of element for trim operation. \end{DoxyCompactList}\item 
+static vector$<$ double $>$ \mbox{\hyperlink{class_c_parser_acff84f9865b81c1c2b5fd88ab09adc91}{parse\+Elements}} (const int rows, const int columns)
+\begin{DoxyCompactList}\small\item\em A function that accepts numbers of rows and columns of the matrix for the next parsing of its elements. \end{DoxyCompactList}\item 
+static vector$<$ double $>$ \mbox{\hyperlink{class_c_parser_a45c0fa51709d42eb8df5e72825fcba16}{parse\+File}} (int \&rows, int \&columns)
+\begin{DoxyCompactList}\small\item\em A function that loads a matrix from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class responsible for entering and processing the entered information from the console and from the file. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_parser_a48e7d15a128598aa916697d7209a311e}\label{class_c_parser_a48e7d15a128598aa916697d7209a311e}} 
+\index{CParser@{CParser}!parseConstant@{parseConstant}}
+\index{parseConstant@{parseConstant}!CParser@{CParser}}
+\doxysubsubsection{\texorpdfstring{parseConstant()}{parseConstant()}}
+{\footnotesize\ttfamily void CParser\+::parse\+Constant (\begin{DoxyParamCaption}\item[{double \&}]{constant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that accepts a constant from the console for product operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em constant} & -\/ a variable for recording a constant. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em CEOFException.} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_c_parser_a4aa466e21620fd0eae7b48737177730c}\label{class_c_parser_a4aa466e21620fd0eae7b48737177730c}} 
+\index{CParser@{CParser}!parseDimensions@{parseDimensions}}
+\index{parseDimensions@{parseDimensions}!CParser@{CParser}}
+\doxysubsubsection{\texorpdfstring{parseDimensions()}{parseDimensions()}}
+{\footnotesize\ttfamily void CParser\+::parse\+Dimensions (\begin{DoxyParamCaption}\item[{int \&}]{rows,  }\item[{int \&}]{columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that accepts matrix dimensions from the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ a variable for recording number of rows of the entered matrix. \\
+\hline
+{\em columns} & -\/ a variable for recording number of columns of the entered matrix. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em CEOFException.} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_c_parser_acff84f9865b81c1c2b5fd88ab09adc91}\label{class_c_parser_acff84f9865b81c1c2b5fd88ab09adc91}} 
+\index{CParser@{CParser}!parseElements@{parseElements}}
+\index{parseElements@{parseElements}!CParser@{CParser}}
+\doxysubsubsection{\texorpdfstring{parseElements()}{parseElements()}}
+{\footnotesize\ttfamily vector$<$ double $>$ CParser\+::parse\+Elements (\begin{DoxyParamCaption}\item[{const int}]{rows,  }\item[{const int}]{columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that accepts numbers of rows and columns of the matrix for the next parsing of its elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ a number of rows. \\
+\hline
+{\em columns} & -\/ a number of columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of all parsed elements. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em CEOFException.} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_c_parser_a45c0fa51709d42eb8df5e72825fcba16}\label{class_c_parser_a45c0fa51709d42eb8df5e72825fcba16}} 
+\index{CParser@{CParser}!parseFile@{parseFile}}
+\index{parseFile@{parseFile}!CParser@{CParser}}
+\doxysubsubsection{\texorpdfstring{parseFile()}{parseFile()}}
+{\footnotesize\ttfamily vector$<$ double $>$ CParser\+::parse\+File (\begin{DoxyParamCaption}\item[{int \&}]{rows,  }\item[{int \&}]{columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that loads a matrix from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ a number of rows. \\
+\hline
+{\em columns} & -\/ a number of columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of all parsed elements. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_c_e_o_f_exception}{CEOFException}},\mbox{\hyperlink{class_c_file_opening_exception}{CFile\+Opening\+Exception}},CFile\+Formatting\+Exception.} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_c_parser_a04989c68af47deac7742a52313b86add}\label{class_c_parser_a04989c68af47deac7742a52313b86add}} 
+\index{CParser@{CParser}!parseIndexes@{parseIndexes}}
+\index{parseIndexes@{parseIndexes}!CParser@{CParser}}
+\doxysubsubsection{\texorpdfstring{parseIndexes()}{parseIndexes()}}
+{\footnotesize\ttfamily void CParser\+::parse\+Indexes (\begin{DoxyParamCaption}\item[{int \&}]{row\+\_\+idx,  }\item[{int \&}]{column\+\_\+idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that accepts indexes of element for trim operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+idx} & -\/ a row index for trim operation. \\
+\hline
+{\em column\+\_\+idx} & -\/ a column index for trim operation. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em CEOFException.} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_c_parser_a3777d961cfa4d6c3a035143477abcdd2}\label{class_c_parser_a3777d961cfa4d6c3a035143477abcdd2}} 
+\index{CParser@{CParser}!parseOperation@{parseOperation}}
+\index{parseOperation@{parseOperation}!CParser@{CParser}}
+\doxysubsubsection{\texorpdfstring{parseOperation()}{parseOperation()}}
+{\footnotesize\ttfamily void CParser\+::parse\+Operation (\begin{DoxyParamCaption}\item[{string \&}]{operation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that accepts operation type from the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation} & -\/ a variable for recording an operation type. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em CEOFException.} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_c_parser_a197e70b579961d7ddec9fc8d4111f14d}\label{class_c_parser_a197e70b579961d7ddec9fc8d4111f14d}} 
+\index{CParser@{CParser}!parseOption@{parseOption}}
+\index{parseOption@{parseOption}!CParser@{CParser}}
+\doxysubsubsection{\texorpdfstring{parseOption()}{parseOption()}}
+{\footnotesize\ttfamily void CParser\+::parse\+Option (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{option }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that accepts a selection option from the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & -\/ a variable for recording an option. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_c_e_o_f_exception}{CEOFException}}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_c_parser_a93c0c5715761640b7d41a6948f135289}\label{class_c_parser_a93c0c5715761640b7d41a6948f135289}} 
+\index{CParser@{CParser}!toupperOperation@{toupperOperation}}
+\index{toupperOperation@{toupperOperation}!CParser@{CParser}}
+\doxysubsubsection{\texorpdfstring{toupperOperation()}{toupperOperation()}}
+{\footnotesize\ttfamily string CParser\+::toupper\+Operation (\begin{DoxyParamCaption}\item[{string}]{operation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+An auxiliary function for checking the correctness of the type of operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation} & -\/ a variable for checking an operation type. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em CEOFException.} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/CParser.\+h\item 
+src/CParser.\+cpp\end{DoxyCompactItemize}

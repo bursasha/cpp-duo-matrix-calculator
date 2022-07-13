@@ -1,0 +1,68 @@
+\hypertarget{_c_exception_8h_source}{}\doxysection{CException.\+h}
+\label{_c_exception_8h_source}\index{src/CException.h@{src/CException.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MATRIXCALCULATOR\_CEXCEPTION\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MATRIXCALCULATOR\_CEXCEPTION\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_exception}{CException}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17      \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} exception () = 0;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_matrices_dimensions_exception}{CMatricesDimensionsException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_exception}{CException}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} exception ();}
+\DoxyCodeLine{30     }
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{38 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_square_matrix_exception}{CSquareMatrixException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_exception}{CException}}}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40 \textcolor{keyword}{public}:}
+\DoxyCodeLine{41      \textcolor{keywordtype}{void} exception ();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{50 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_irreversible_exception}{CIrreversibleException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_exception}{CException}}}
+\DoxyCodeLine{51 \{}
+\DoxyCodeLine{52 \textcolor{keyword}{public}:}
+\DoxyCodeLine{53      \textcolor{keywordtype}{void} exception ();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_indexes_exception}{CIndexesException}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_exception}{CException}}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64 \textcolor{keyword}{public}:}
+\DoxyCodeLine{65      \textcolor{keywordtype}{void} exception ();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{74 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_file_opening_exception}{CFileOpeningException}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_c_exception}{CException}}}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76 \textcolor{keyword}{public}:}
+\DoxyCodeLine{77      \textcolor{keywordtype}{void} exception ();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{86 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_file_formatting_exception}{CFileFormattingException}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_c_exception}{CException}}}
+\DoxyCodeLine{87 \{}
+\DoxyCodeLine{88 \textcolor{keyword}{public}:}
+\DoxyCodeLine{89      \textcolor{keywordtype}{void} exception ();}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{98 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_e_o_f_exception}{CEOFException}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_c_exception}{CException}}}
+\DoxyCodeLine{99 \{}
+\DoxyCodeLine{100 \textcolor{keyword}{public}:}
+\DoxyCodeLine{101      \textcolor{keywordtype}{void} exception ();}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MATRIXCALCULATOR\_CEXCEPTION\_H}}
+
+\end{DoxyCode}

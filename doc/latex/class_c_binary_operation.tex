@@ -1,0 +1,158 @@
+\hypertarget{class_c_binary_operation}{}\doxysection{CBinary\+Operation Class Reference}
+\label{class_c_binary_operation}\index{CBinaryOperation@{CBinaryOperation}}
+
+
+A class containing static functions for performing binary operations on matrices.  
+
+
+
+
+{\ttfamily \#include $<$CBinary\+Operation.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_binary_operation_a741e159b0c374fcf5d9313d898a88028}{sum}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ lhs\+\_\+m, const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ rhs\+\_\+m)
+\begin{DoxyCompactList}\small\item\em A function that returns a sum of 2 matrices. Receives 2 matrices with same dimensions. \end{DoxyCompactList}\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_binary_operation_a6fba70424e149da91e0987699ff77edf}{subtraction}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ lhs\+\_\+m, const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ rhs\+\_\+m)
+\begin{DoxyCompactList}\small\item\em A function that performs the subtraction of 2 matrices. Receives 2 matrices with same dimensions. \end{DoxyCompactList}\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_binary_operation_a7c463170d53e02ca0111e479dac93fd4}{product}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ lhs\+\_\+m, const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ rhs\+\_\+m)
+\begin{DoxyCompactList}\small\item\em A function that returns a product of 2 matrices. Receives 2 matrices where number of columns of the first matrix is same as number of rows of the second matrix. \end{DoxyCompactList}\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_binary_operation_a4927177d9172de398d82f7f0b2dbadf2}{product}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ m, const double factor)
+\begin{DoxyCompactList}\small\item\em A function that returns a product of a matrix with a constant other than 0. \end{DoxyCompactList}\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_binary_operation_a8b9a65962fe0ead21f9f277617fb8684}{join\+Horizontally}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ lhs\+\_\+m, const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ rhs\+\_\+m)
+\begin{DoxyCompactList}\small\item\em A function that returns a horizontally joined matrix. Receives 2 matrices with same number of rows. \end{DoxyCompactList}\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_binary_operation_a9c69de15f1235a37776f90b3f5dee07c}{join\+Vertically}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ lhs\+\_\+m, const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ rhs\+\_\+m)
+\begin{DoxyCompactList}\small\item\em A function that returns a vertically joined matrix. Receives 2 matrices with same number of columns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class containing static functions for performing binary operations on matrices. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_binary_operation_a8b9a65962fe0ead21f9f277617fb8684}\label{class_c_binary_operation_a8b9a65962fe0ead21f9f277617fb8684}} 
+\index{CBinaryOperation@{CBinaryOperation}!joinHorizontally@{joinHorizontally}}
+\index{joinHorizontally@{joinHorizontally}!CBinaryOperation@{CBinaryOperation}}
+\doxysubsubsection{\texorpdfstring{joinHorizontally()}{joinHorizontally()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CBinary\+Operation\+::join\+Horizontally (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{lhs\+\_\+m,  }\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{rhs\+\_\+m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns a horizontally joined matrix. Receives 2 matrices with same number of rows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs\+\_\+m} & -\/ the first received matrix. \\
+\hline
+{\em rhs\+\_\+m} & -\/ the second received matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix\+: lhs\+\_\+m join rhs\+\_\+m. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_binary_operation_a9c69de15f1235a37776f90b3f5dee07c}\label{class_c_binary_operation_a9c69de15f1235a37776f90b3f5dee07c}} 
+\index{CBinaryOperation@{CBinaryOperation}!joinVertically@{joinVertically}}
+\index{joinVertically@{joinVertically}!CBinaryOperation@{CBinaryOperation}}
+\doxysubsubsection{\texorpdfstring{joinVertically()}{joinVertically()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CBinary\+Operation\+::join\+Vertically (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{lhs\+\_\+m,  }\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{rhs\+\_\+m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns a vertically joined matrix. Receives 2 matrices with same number of columns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs\+\_\+m} & -\/ the first received matrix. \\
+\hline
+{\em rhs\+\_\+m} & -\/ the second received matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix\+: lhs\+\_\+m join rhs\+\_\+m. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_binary_operation_a7c463170d53e02ca0111e479dac93fd4}\label{class_c_binary_operation_a7c463170d53e02ca0111e479dac93fd4}} 
+\index{CBinaryOperation@{CBinaryOperation}!product@{product}}
+\index{product@{product}!CBinaryOperation@{CBinaryOperation}}
+\doxysubsubsection{\texorpdfstring{product()}{product()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CBinary\+Operation\+::product (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{lhs\+\_\+m,  }\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{rhs\+\_\+m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns a product of 2 matrices. Receives 2 matrices where number of columns of the first matrix is same as number of rows of the second matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs\+\_\+m} & -\/ the first received matrix. \\
+\hline
+{\em rhs\+\_\+m} & -\/ the second received matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix\+: lhs\+\_\+m $\ast$ rhs\+\_\+m. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_binary_operation_a4927177d9172de398d82f7f0b2dbadf2}\label{class_c_binary_operation_a4927177d9172de398d82f7f0b2dbadf2}} 
+\index{CBinaryOperation@{CBinaryOperation}!product@{product}}
+\index{product@{product}!CBinaryOperation@{CBinaryOperation}}
+\doxysubsubsection{\texorpdfstring{product()}{product()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CBinary\+Operation\+::product (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{m,  }\item[{const double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns a product of a matrix with a constant other than 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ a received matrix. \\
+\hline
+{\em factor} & -\/ a received constant other than 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix\+: lhs\+\_\+m $\ast$ factor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_binary_operation_a6fba70424e149da91e0987699ff77edf}\label{class_c_binary_operation_a6fba70424e149da91e0987699ff77edf}} 
+\index{CBinaryOperation@{CBinaryOperation}!subtraction@{subtraction}}
+\index{subtraction@{subtraction}!CBinaryOperation@{CBinaryOperation}}
+\doxysubsubsection{\texorpdfstring{subtraction()}{subtraction()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CBinary\+Operation\+::subtraction (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{lhs\+\_\+m,  }\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{rhs\+\_\+m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that performs the subtraction of 2 matrices. Receives 2 matrices with same dimensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs\+\_\+m} & -\/ the first received matrix, the second matrix will be subtracted from it. \\
+\hline
+{\em rhs\+\_\+m} & -\/ the second received matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix\+: lhs\+\_\+m -\/ rhs\+\_\+m. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_binary_operation_a741e159b0c374fcf5d9313d898a88028}\label{class_c_binary_operation_a741e159b0c374fcf5d9313d898a88028}} 
+\index{CBinaryOperation@{CBinaryOperation}!sum@{sum}}
+\index{sum@{sum}!CBinaryOperation@{CBinaryOperation}}
+\doxysubsubsection{\texorpdfstring{sum()}{sum()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CBinary\+Operation\+::sum (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{lhs\+\_\+m,  }\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{rhs\+\_\+m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns a sum of 2 matrices. Receives 2 matrices with same dimensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs\+\_\+m} & -\/ the first received matrix. \\
+\hline
+{\em rhs\+\_\+m} & -\/ the second received matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix that is a sum of lhs\+\_\+m and rhs\+\_\+m. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/CBinary\+Operation.\+h\item 
+src/CBinary\+Operation.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,130 @@
+\hypertarget{class_c_unary_operation}{}\doxysection{CUnary\+Operation Class Reference}
+\label{class_c_unary_operation}\index{CUnaryOperation@{CUnaryOperation}}
+
+
+A class containing static functions for performing unary operations on matrices.  
+
+
+
+
+{\ttfamily \#include $<$CUnary\+Operation.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_unary_operation_a2b9bdeebc8d78bcb6ee812f067f4d1c6}{transpose}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ m)
+\begin{DoxyCompactList}\small\item\em A function that returns a transposed matrix. \end{DoxyCompactList}\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_unary_operation_ab9e4b1fffde394f7fa77f5f186860a52}{gaussian\+Elimination}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ m)
+\begin{DoxyCompactList}\small\item\em A function that returns a matrix after Gaussian elimination process. \end{DoxyCompactList}\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_unary_operation_a30b2d50642ebf1707f47cbc61a229bae}{inverse}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ m)
+\begin{DoxyCompactList}\small\item\em A function that returns an inverse matrix. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_c_unary_operation_a0e8ab26f46549917623058c84706b688}{determinant}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ m)
+\begin{DoxyCompactList}\small\item\em A function that returns a determinant of the matrix. \end{DoxyCompactList}\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_unary_operation_a5827a0ec867c17a3865bab2f0cae9931}{trim}} (const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ m, const size\+\_\+t row\+\_\+pos, const size\+\_\+t column\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em A function that returns a trimmed matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class containing static functions for performing unary operations on matrices. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_unary_operation_a0e8ab26f46549917623058c84706b688}\label{class_c_unary_operation_a0e8ab26f46549917623058c84706b688}} 
+\index{CUnaryOperation@{CUnaryOperation}!determinant@{determinant}}
+\index{determinant@{determinant}!CUnaryOperation@{CUnaryOperation}}
+\doxysubsubsection{\texorpdfstring{determinant()}{determinant()}}
+{\footnotesize\ttfamily double CUnary\+Operation\+::determinant (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns a determinant of the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ a received matrix for getting its determinant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a determinant of the matrix m. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_unary_operation_ab9e4b1fffde394f7fa77f5f186860a52}\label{class_c_unary_operation_ab9e4b1fffde394f7fa77f5f186860a52}} 
+\index{CUnaryOperation@{CUnaryOperation}!gaussianElimination@{gaussianElimination}}
+\index{gaussianElimination@{gaussianElimination}!CUnaryOperation@{CUnaryOperation}}
+\doxysubsubsection{\texorpdfstring{gaussianElimination()}{gaussianElimination()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CUnary\+Operation\+::gaussian\+Elimination (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns a matrix after Gaussian elimination process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ a received matrix to be GEMmed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix that is GEMmed matrix m, the matrix m remains the same. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_unary_operation_a30b2d50642ebf1707f47cbc61a229bae}\label{class_c_unary_operation_a30b2d50642ebf1707f47cbc61a229bae}} 
+\index{CUnaryOperation@{CUnaryOperation}!inverse@{inverse}}
+\index{inverse@{inverse}!CUnaryOperation@{CUnaryOperation}}
+\doxysubsubsection{\texorpdfstring{inverse()}{inverse()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CUnary\+Operation\+::inverse (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns an inverse matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ a received matrix to be inverted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix that is inverted matrix m, the matrix m remains the same. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_unary_operation_a2b9bdeebc8d78bcb6ee812f067f4d1c6}\label{class_c_unary_operation_a2b9bdeebc8d78bcb6ee812f067f4d1c6}} 
+\index{CUnaryOperation@{CUnaryOperation}!transpose@{transpose}}
+\index{transpose@{transpose}!CUnaryOperation@{CUnaryOperation}}
+\doxysubsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CUnary\+Operation\+::transpose (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns a transposed matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ a received matrix to be transposed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix that is transposed matrix m, the matrix m remains the same. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_unary_operation_a5827a0ec867c17a3865bab2f0cae9931}\label{class_c_unary_operation_a5827a0ec867c17a3865bab2f0cae9931}} 
+\index{CUnaryOperation@{CUnaryOperation}!trim@{trim}}
+\index{trim@{trim}!CUnaryOperation@{CUnaryOperation}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CUnary\+Operation\+::trim (\begin{DoxyParamCaption}\item[{const shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$}]{m,  }\item[{const size\+\_\+t}]{row\+\_\+pos,  }\item[{const size\+\_\+t}]{column\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that returns a trimmed matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ a received matrix to be trimmed. \\
+\hline
+{\em row\+\_\+pos} & -\/ a row index starting from which the matrix m will be trimmed. \\
+\hline
+{\em column\+\_\+pos} & -\/ a column index starting from which the matrix m will be trimmed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new matrix that is trimmed matrix m, the matrix m remains the same. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/CUnary\+Operation.\+h\item 
+src/CUnary\+Operation.\+cpp\end{DoxyCompactItemize}

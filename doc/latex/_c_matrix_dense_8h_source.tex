@@ -1,0 +1,24 @@
+\hypertarget{_c_matrix_dense_8h_source}{}\doxysection{CMatrix\+Dense.\+h}
+\label{_c_matrix_dense_8h_source}\index{src/CMatrixDense.h@{src/CMatrixDense.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MATRIXCALCULATOR\_CMATRIXDENSE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MATRIXCALCULATOR\_CMATRIXDENSE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}CMatrix.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_matrix_dense}{CMatrixDense}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_matrix}{CMatrix}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20      \mbox{\hyperlink{class_c_matrix_dense_a0593a69c23dc40fdd485c6d1a2ed2cf1}{CMatrixDense}} (\textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} rows, \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} columns, \textcolor{keyword}{const} vector<double>\& input\_elements);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27      vector<double> m\_DenseElements;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{36      \textcolor{keywordtype}{double} getElement (\textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} row\_pos, \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} column\_pos) \textcolor{keyword}{const override};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MATRIXCALCULATOR\_CMATRIXDENSE\_H}}
+
+\end{DoxyCode}

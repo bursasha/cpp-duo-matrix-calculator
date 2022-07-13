@@ -1,0 +1,211 @@
+\hypertarget{class_c_matrix}{}\doxysection{CMatrix Class Reference}
+\label{class_c_matrix}\index{CMatrix@{CMatrix}}
+
+
+A general abstract class representing an interface for a sparse and a dense matrix.  
+
+
+
+
+{\ttfamily \#include $<$CMatrix.\+h$>$}
+
+Inheritance diagram for CMatrix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_matrix}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_matrix_a008dff6e15c2b1708f7ed442cda7af90}{CMatrix}} (const size\+\_\+t rows, const size\+\_\+t columns)
+\begin{DoxyCompactList}\small\item\em Basic matrix constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_matrix_a5cc4cf5606fe1437aac63297791a7c3b}\label{class_c_matrix_a5cc4cf5606fe1437aac63297791a7c3b}} 
+void {\bfseries print} () const
+\begin{DoxyCompactList}\small\item\em A function that writes a matrix to the console or to a file. If the matrix has more than 10 rows or columns, then it is saved to a file Result\+Matrix.\+txt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ \mbox{\hyperlink{class_c_matrix_a39c2eae18b2ccd59e70bb4859d02e51c}{create\+Matrix}} (const size\+\_\+t rows, const size\+\_\+t columns, const vector$<$ double $>$ \&input\+\_\+elements)
+\begin{DoxyCompactList}\small\item\em A function that creates a sparse or dense matrix based on the number of zero elements. If the percentage of non-\/zero elements is less than or equal to 30\%, then the function returns a sparse matrix, otherwise it returns a dense matrix. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_c_matrix_af6e198d40ecaa64c99096dbd83427196}{close\+Enough}} (const double x, const double y)
+\begin{DoxyCompactList}\small\item\em A function for comparing 2 numbers of the double type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_matrix_a953bdb6adb8121978f08e9084ef17e46}\label{class_c_matrix_a953bdb6adb8121978f08e9084ef17e46}} 
+void {\bfseries print\+To\+Console} () const
+\begin{DoxyCompactList}\small\item\em A function for displaying the matrix to the console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_matrix_a1388e80dd144da8c09399fc658b5107d}{save\+To\+File}} () const
+\begin{DoxyCompactList}\small\item\em Function for saving the matrix to a file Result\+Matrix.\+txt. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_matrix_a2fd028b157a24714e30ff02425a7aed2}{get\+Element}} (const size\+\_\+t row\+\_\+pos, const size\+\_\+t column\+\_\+pos) const =0
+\begin{DoxyCompactList}\small\item\em A virtual function that returns an element of the matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_c_matrix_ae3098c29d394f409f4281a2817131404}{get\+Density}} (const size\+\_\+t rows, const size\+\_\+t columns, const vector$<$ double $>$ \&input\+\_\+elements)
+\begin{DoxyCompactList}\small\item\em A function that determines the percentage of non-\/zero elements in the matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_matrix_a43f01b42e2f8a817d12a90fd1cf57047}\label{class_c_matrix_a43f01b42e2f8a817d12a90fd1cf57047}} 
+size\+\_\+t {\bfseries m\+\_\+\+Rows}
+\begin{DoxyCompactList}\small\item\em A number of rows, columns, and elements in the matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_matrix_a9b6d6a8f5a7a1fddd8afbff0c40b6090}\label{class_c_matrix_a9b6d6a8f5a7a1fddd8afbff0c40b6090}} 
+size\+\_\+t {\bfseries m\+\_\+\+Columns}
+\item 
+\mbox{\Hypertarget{class_c_matrix_a4c6234b121d2e2602475a24220c9286b}\label{class_c_matrix_a4c6234b121d2e2602475a24220c9286b}} 
+size\+\_\+t {\bfseries m\+\_\+\+Elements}
+\item 
+\mbox{\Hypertarget{class_c_matrix_af80258112527c90a1068011b9dde695f}\label{class_c_matrix_af80258112527c90a1068011b9dde695f}} 
+bool {\bfseries m\+\_\+\+Determinant\+Sign}
+\begin{DoxyCompactList}\small\item\em A determinant sign of the matrix, true = +, false = -\/. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_matrix_af4f5f26fd912f0d0a577966c74602158}\label{class_c_matrix_af4f5f26fd912f0d0a577966c74602158}} 
+constexpr static const double {\bfseries m\+\_\+\+Inaccuracy} = 1e-\/9
+\begin{DoxyCompactList}\small\item\em The inaccuracy error of comparing 2 double numbers; the limit of the content of non-\/zero elements to create a sparse or dense matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_matrix_aafc57db5c74de02989881f39b7441443}\label{class_c_matrix_aafc57db5c74de02989881f39b7441443}} 
+constexpr static const double {\bfseries m\+\_\+\+Density\+Boundary} = 0.\+3
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_matrix_a4609ec4317102f33488c2d7a3f03bcc8}\label{class_c_matrix_a4609ec4317102f33488c2d7a3f03bcc8}} 
+class \mbox{\hyperlink{class_c_matrix_a4609ec4317102f33488c2d7a3f03bcc8}{CBinary\+Operation}}
+\begin{DoxyCompactList}\small\item\em This class provides access to its attributes and methods for performing various mathematical and linear operations on matrices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_matrix_aadd863df384dee8b886bd5764f7b5be5}\label{class_c_matrix_aadd863df384dee8b886bd5764f7b5be5}} 
+class {\bfseries CUnary\+Operation}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A general abstract class representing an interface for a sparse and a dense matrix. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_matrix_a008dff6e15c2b1708f7ed442cda7af90}\label{class_c_matrix_a008dff6e15c2b1708f7ed442cda7af90}} 
+\index{CMatrix@{CMatrix}!CMatrix@{CMatrix}}
+\index{CMatrix@{CMatrix}!CMatrix@{CMatrix}}
+\doxysubsubsection{\texorpdfstring{CMatrix()}{CMatrix()}}
+{\footnotesize\ttfamily CMatrix\+::\+CMatrix (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{rows,  }\item[{const size\+\_\+t}]{columns }\end{DoxyParamCaption})}
+
+
+
+Basic matrix constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ a number of rows in the matrix being created. \\
+\hline
+{\em columns} & -\/ a number of columns in the matrix being created. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_matrix_af6e198d40ecaa64c99096dbd83427196}\label{class_c_matrix_af6e198d40ecaa64c99096dbd83427196}} 
+\index{CMatrix@{CMatrix}!closeEnough@{closeEnough}}
+\index{closeEnough@{closeEnough}!CMatrix@{CMatrix}}
+\doxysubsubsection{\texorpdfstring{closeEnough()}{closeEnough()}}
+{\footnotesize\ttfamily bool CMatrix\+::close\+Enough (\begin{DoxyParamCaption}\item[{const double}]{x,  }\item[{const double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function for comparing 2 numbers of the double type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ the first double number. \\
+\hline
+{\em y} & -\/ the second double number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if two numbers are close enough taking into account the inaccuracy, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrix_a39c2eae18b2ccd59e70bb4859d02e51c}\label{class_c_matrix_a39c2eae18b2ccd59e70bb4859d02e51c}} 
+\index{CMatrix@{CMatrix}!createMatrix@{createMatrix}}
+\index{createMatrix@{createMatrix}!CMatrix@{CMatrix}}
+\doxysubsubsection{\texorpdfstring{createMatrix()}{createMatrix()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_matrix}{CMatrix}} $>$ CMatrix\+::create\+Matrix (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{rows,  }\item[{const size\+\_\+t}]{columns,  }\item[{const vector$<$ double $>$ \&}]{input\+\_\+elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that creates a sparse or dense matrix based on the number of zero elements. If the percentage of non-\/zero elements is less than or equal to 30\%, then the function returns a sparse matrix, otherwise it returns a dense matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ a number of rows in the matrix being created. \\
+\hline
+{\em columns} & -\/ a number of columns in the matrix being created. \\
+\hline
+{\em input\+\_\+elements} & -\/ a vector containing all the elements of the matrix being created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a dense or a sparse matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrix_ae3098c29d394f409f4281a2817131404}\label{class_c_matrix_ae3098c29d394f409f4281a2817131404}} 
+\index{CMatrix@{CMatrix}!getDensity@{getDensity}}
+\index{getDensity@{getDensity}!CMatrix@{CMatrix}}
+\doxysubsubsection{\texorpdfstring{getDensity()}{getDensity()}}
+{\footnotesize\ttfamily double CMatrix\+::get\+Density (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{rows,  }\item[{const size\+\_\+t}]{columns,  }\item[{const vector$<$ double $>$ \&}]{input\+\_\+elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+A function that determines the percentage of non-\/zero elements in the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ a number of rows in the considered matrix. \\
+\hline
+{\em columns} & -\/ a number of columns in the considered matrix. \\
+\hline
+{\em input\+\_\+elements} & -\/ all the elements of the considered matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+density of the matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrix_a2fd028b157a24714e30ff02425a7aed2}\label{class_c_matrix_a2fd028b157a24714e30ff02425a7aed2}} 
+\index{CMatrix@{CMatrix}!getElement@{getElement}}
+\index{getElement@{getElement}!CMatrix@{CMatrix}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily virtual double CMatrix\+::get\+Element (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{row\+\_\+pos,  }\item[{const size\+\_\+t}]{column\+\_\+pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+A virtual function that returns an element of the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+\_\+pos} & -\/ a row index of the desired element. \\
+\hline
+{\em column\+\_\+pos} & -\/ a column index of the desired element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+desired element of the matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_matrix_a1388e80dd144da8c09399fc658b5107d}\label{class_c_matrix_a1388e80dd144da8c09399fc658b5107d}} 
+\index{CMatrix@{CMatrix}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!CMatrix@{CMatrix}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void CMatrix\+::save\+To\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Function for saving the matrix to a file Result\+Matrix.\+txt. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_c_file_opening_exception}{CFile\+Opening\+Exception}}} & if the file could not be opened for writing. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/CMatrix.\+h\item 
+src/CMatrix.\+cpp\end{DoxyCompactItemize}
